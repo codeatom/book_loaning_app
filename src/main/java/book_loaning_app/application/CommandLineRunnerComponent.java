@@ -16,7 +16,7 @@ import java.time.LocalDate;
 
 @Profile("!test")
 @Component
-public class AppDemoComponent implements CommandLineRunner {
+public class CommandLineRunnerComponent implements CommandLineRunner {
 
     @Autowired
     BookLoanDAOImpl bookLoanDAO;
