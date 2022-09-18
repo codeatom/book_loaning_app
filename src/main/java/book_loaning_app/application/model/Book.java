@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "Book")
+@Table(name = "BOOK")
 public class Book {
 
     @Id
@@ -24,11 +24,11 @@ public class Book {
     @Column(name = "title")
     private String title;
 
-    @Column(name = "maxLoanDays")
+    @Column(name = "maxLoandays")
     private int maxLoanDays;
 
     @ManyToMany
-    @JoinTable(name = "book_author", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
+    @JoinTable(name = "book_author", joinColumns = @JoinColumn(name = "writtenbook_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
     private final Set<Author> authors = new HashSet<>();
 
     public Book() {

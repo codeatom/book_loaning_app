@@ -6,20 +6,20 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "Author")
+@Table(name = "AUTHOR")
 public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer authorId;
 
-    @Column(name = "firstName")
+    @Column(name = "firstname")
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "lastname")
     private String lastName;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "authors")
     private final Set<Book> writtenBooks = new HashSet<>();
 
     public Author() {

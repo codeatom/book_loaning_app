@@ -5,17 +5,17 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Bookloan")
+@Table(name = "BOOKLOAN")
 public class BookLoan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer loanId;
 
-    @Column(name = "loanDate")
+    @Column(name = "loandate")
     private LocalDate loanDate;
 
-    @Column(name = "dueDate")
+    @Column(name = "duedate")
     private LocalDate dueDate;
 
     @Column(name = "returned")

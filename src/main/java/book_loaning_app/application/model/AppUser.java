@@ -8,7 +8,7 @@ import java.util.Objects;
 
 
 @Entity
-@Table(name = "Appuser")
+@Table(name = "APPUSER")
 public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class AppUser {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "regDate")
+    @Column(name = "regdate")
     private LocalDate regDate;
 
     @OneToOne(cascade = CascadeType.ALL)

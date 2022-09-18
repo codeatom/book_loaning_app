@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Details")
+@Table(name = "DETAIL")
 public class Details {
 
     @Id
@@ -18,7 +18,7 @@ public class Details {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "birthDate")
+    @Column(name = "birthdate")
     private LocalDate birthDate;
 
     public Details() {
